@@ -4,6 +4,7 @@ var database = require('../models/database');
 
 router.post('/', async function(req, res) {
     var visitante = database.Visitante;
+    visitante = req.body;
     try {
         var retorno = database.Visitante.create(visitante);
     } catch (error) {
@@ -14,6 +15,7 @@ router.post('/', async function(req, res) {
 
 router.post('/visitante_condomino', async function(req, res) {
     var visitante_condomino = database.Visitante_Condomino;
+    visitante_condomino = req.body;
     try {
         var retorno = database.Visitante_Condomino.create(visitante_condomino);
     } catch (error) {
