@@ -5,14 +5,14 @@ module.exports = function (sequelize, DataTypes) {
             primaryKey: true,
             autoIncrement: true
         },
-        nmServico: {
+        nmservico: {
             type: DataTypes.STRING,
 			allowNull: false
         },
-        rgServico: {
+        rgservico: {
             type: DataTypes.STRING
         },
-        nmEmpresa: {
+        nmempresa: {
             type: DataTypes.STRING
         },
         apartamento_id : { type: DataTypes.INTEGER}

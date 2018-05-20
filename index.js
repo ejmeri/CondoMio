@@ -15,6 +15,7 @@ var db = require('./models/database'); // database and tables
 const consign = require('consign');
 
 consign()
+    .include('routes')
     .into(app);
 
 db.sequelize.sync().then(function () {
