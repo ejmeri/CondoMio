@@ -48,7 +48,6 @@ router.put('/:condomino_id', async function(req, res) {
 });
 
 router.post('/encomenda', async function(req, res) {
-
     var encomenda = database.Encomenda;
     encomenda = req.body;
 
@@ -62,7 +61,6 @@ router.post('/encomenda', async function(req, res) {
 });
 
 router.put('/encomenda/:encomenda_id', async function(req, res) {
-
     var {encomenda_id} = req.params; 
     var encomenda = database.Encomenda;
     encomenda = req.body;
@@ -94,7 +92,6 @@ router.post('/reserva', async function(req, res) {
 });
 
 router.put('/reserva/:reserva_id', async function(req, res) {
-
     var {reserva_id} = req.params; 
     var reserva = database.Reserva;
     reserva = req.body;

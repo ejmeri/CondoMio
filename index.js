@@ -18,8 +18,8 @@ consign()
     .include('routes')
     .into(app);
 
-db.sequelize.sync().then(function () {
-    server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", () => {
-        console.log("Connected");
-    });
+// db.sequelize.sync().then(function () {
+server.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", () => {
+    console.log("Connected");
 });
+// });
