@@ -38,6 +38,7 @@ if (!global.hasOwnProperty('db')) {
 	global.db.Apartamento.hasMany(global.db.Contrato);
 	global.db.Condomino.hasMany(global.db.Contrato);
 	global.db.Encomenda_Status.hasMany(global.db.Encomenda);
+	global.db.Condomino.hasMany(global.db.Encomenda);
 	global.db.Condominio.hasMany(global.db.AreasEmComum);
 	global.db.Condomino.hasMany(global.db.Reserva);
 	global.db.AreasEmComum.hasMany(global.db.Reserva);
