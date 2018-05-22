@@ -1,4 +1,4 @@
-const base = require("../database/mysql");
+const base = require("../database/postgres");
 
 
 if (!global.hasOwnProperty('db')) {
