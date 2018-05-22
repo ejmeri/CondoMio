@@ -8,6 +8,19 @@ router.get('/', (req, res) => {
     res.send('Rota para informações do condominio');
 });
 
+
+router.get('/:condominio_id', async function (req, res) {
+    var condominio_id = req.params.condominio_id;
+
+    try {
+        var condominio = await database.Condominio.findOne({where: {id : condominio_id}});
+    } catch (error) {
+        res.status(412).send({Mensagem: error});
+    }
+
+    res.send({Condominio: condominio});
+});
+
 router.post('/', async function(req, res) {
     const {nmcondominio} = req.body;
 
