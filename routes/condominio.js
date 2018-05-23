@@ -92,4 +92,15 @@ router.post('/areasemcomum', async function(req, res) {
     res.send({AreasEmComum: retorno});
 });
 
+router.get('/areasemcomum/:condominio_id', async function(req, res) {
+    const {condominio_id} = req.params;     
+    try {
+        var retorno = await database.AreasEmComum.findAll({where: {condominio_id: condominio_id}});
+    } catch (error) {
+        res.status(412).send({mensagem: error});
+    }
+
+    res.send({AreasEmComum: retorno});
+});
+
 module.exports = app => app.use('/condominio', router);
